@@ -1,0 +1,29 @@
+.features{
+    grid-column: center-start / center-end;
+    margin: 15rem 0;
+
+    display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    align-items: start; //aligns the item of each of the child in respect to their cell
+    gap: 6rem;
+}
+
+.feature{
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    column-gap: 3rem;
+    row-gap: 1rem;
+    // grid-template-rows: repeat(2, min-content);
+    &__icon{
+        fill: $color-primary;
+        width: 3.5rem;
+        height: 3.5rem;
+        grid-row: 1/ span 2;
+        transform: translateY(-1rem);
+    }
+    &__text{
+        font-size: 1.4rem;
+        // grid-column: 2/3;
+    }
+}
